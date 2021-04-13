@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>문의 및 제보</title>
+</head>
+<link rel="stylesheet" href="noti_infor.css">
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function(){
+
+        //모든 서브 메뉴 감추기
+        $(".sub").css({display:"none"});
+        //$(".sub").hide(); //위코드와 동일
+
+        $(".title").click(function(){
+            //일단 서브메뉴 다 가립니다.
+            //$(".sub").css({display:"none"});
+
+            //열린 서브메뉴에 대해서만 가립니다.
+            $(".sub").each(function(){
+                console.log($(this).css("display"));
+                if($(this).css("display")=="block") {
+                    //$(".sub").css({display:"none"});
+                    //$(this).hide();
+                    $(this).slideUp("fast");
+                }
+            });
+
+            //현재 요소의 다음 요소를 보이게 합니다.
+            //$(this).next("ul").css({display:"block"});
+            //$(this).next("ul").show();
+            $(this).next("ul").slideDown("fast");
+        })
+    });
+</script>
+
+<body>
+  <img src="C:\Users\wdf78\OneDrive\바탕 화면\HJH\2021 1학기\프로젝트구현 - 임경현\사진/Logo.png"
+            alt="Logo"></img>
+
+   <div id ="menu_background">
+    <ul id="navi">
+        <li class="group">
+            <div class="title"><a href="main.html">백신</a></div>
+        </li>
+
+        <li class="group">
+            <div class="title">기사</div>
+            <ul class="sub">
+                <li><a href="arti_press.html">언론사 별</a></li>
+                <li><a href="arti_vac.html">백신 별</a></li>
+            </ul>
+        </li>
+
+        <li class="group">
+            <div class="title"><a herf="vac_post.html">접종후기</a></div>
+        </li>
+
+        <li class="group">
+            <div class="title">공지</a></div>
+            <ul class="sub">
+                <li><a href="notice.html">공지사항</a></li>
+                <li><a href="noti_infor.html">문의 및 제보</a></li>
+                <li><a href="noti_spon_infor.html">후원정보</a></li>
+            </ul>
+        </li>
+
+        <li class="group">
+            <div class="title">바로알기</div>
+            <ul class="sub">
+            <li><a href="knowing_type of vac.html">백신 종류별 특성</a></li>
+            <li><a href="knowing_vac_organ.html">백신 접종 기관</a></li>
+            <li><a href="knowing_vac_vidio.html">백신 동영상</a></li>
+          </ul>
+      </li>
+  </ul>
+  <div id="menu_menu_back">문의 및 제보
+<div id="gray_back">
+<div id="grayfont"> <br>가짜 뉴스, 허위 조작 정보를 통해 예방 접종 거부를 조장하여<br><br>
+  집단 면역체계 구축을 방해하는 행위는<br><br> 국민의 생명과 안전을 위협하는 행위입니다!<br><br>
+  가짜 뉴스를 보신다면 우리의 안전을 위해 신고해주세요!<br><br>국민 여러분의 적극적인 제보를 기다립니다.<br>
+  <br><br><br><br><div style="color: white; font-weight:bold; text-shadow:3px 3px 3px gray;">
+                  문의 및 제보 이메일: yghasd@g.shingu.ac.kr</div><br><br>
+</div>
+</div>
+  </div>
+  <div id="ads">광고 공간</div>
+ </div>
+
+    <p class="footer">
+      Copyright2021.1조 All pictures cannot be copied without permisson.<br>
+      yghasd@g.shingu.ac.kr
+    </p>
+</body>
+</html>

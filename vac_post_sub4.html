@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>접종후기_서브4</title>
+</head>
+<style>
+    body {
+      width: 1920px;
+      height: 2000px;
+      padding: 84px 0 245px;
+      background-color: #ffffff;
+      font-family: "MalgunGothic";
+      font-size: 27px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: left;
+      color: #000000;
+}
+
+    #menu_background { /*회색 지도, 메뉴, 그래프, 광고 영역*/
+    width: 1920px;
+    height: 1427px;
+    margin: 22px 0 60px;
+    padding: 68px 524px 59px 201px;
+    background-color: #EDEDED;
+}
+
+    #menu_menu_back {
+      width: 872px;
+      height: 1054px;
+      margin: 0 0 45px 79px;
+      padding: 27px 43px 27px 45px;
+      box-shadow: 1.1px 2.8px 7px 0 rgba(0, 0, 0, 0.3);
+      background-color: #ffffff;
+      position: relative;
+      left: 24%;
+}
+
+    #ex_back {
+      width: 784px;
+      height:202px;
+      margin: 0 0 29px;
+      padding: 15px 00px 21px 90px;
+      opacity: 0.59;
+      border-radius: 10px;
+      border: solid 1px #959695;
+      background-color: #ffffff;
+}
+
+    ul#navi {
+      width: 244px;
+      height: 100px;
+      margin: 38px 0 0;
+      padding: 38px 98px 35px 96px;
+      text-indent: 10px;
+}
+    ul#navi, ul#navi ul {
+        margin:0;
+        padding:0;
+        list-style:none;
+        float: left;
+}
+
+    li.group {
+        text-align: center;
+}
+    li.group div.title {
+      width: 244px;
+      height: 85px;
+      /* margin: 35px 0 0; */ /*마진 사용하면 메뉴들 사이가 떨어짐*/
+     padding: 36px 69px 38px 72px;
+      background:#ffffff;
+      cursor:pointer;
+}
+    ul.sub li {
+      width: 244px;
+      height: 85px;
+      /* margin: 35px 0 0; */ /*마진 사용하면 메뉴들 사이가 떨어짐*/
+      padding: 40px 74px 33px 66px;
+      line-height:35px;
+      background-color: #9BD377;
+      text-align: center;
+      cursor:pointer;
+}
+    ul.sub li a {
+        display: block;
+        width: 100%;
+        height:100%;
+        text-decoration: none;
+        color:#000000;
+}
+    ul.sub li:hover {
+        text-decoration: underline;
+}
+
+#ads {
+     width: 872px;
+     height: 150px;
+     background-color: #ffffff;
+     position: relative;
+     left: 30%;
+     border: 2px solid #F3F3F3;
+     border-color: gray;
+}
+
+.footer {
+  width: 866px;
+  height: 74px;
+  margin: 59px 527px 0;
+  font-family: "MalgunGothic";
+  font-size: 27px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #545454;
+}
+
+img {
+width: 407px;
+height: 88px;
+margin: 0 770px 22px 743px;
+display: block;
+margin-left: 50%;
+margin-right: auto;
+}
+
+</style>
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function(){
+
+        //모든 서브 메뉴 감추기
+        $(".sub").css({display:"none"});
+        //$(".sub").hide(); //위코드와 동일
+
+        $(".title").click(function(){
+            //일단 서브메뉴 다 가립니다.
+            //$(".sub").css({display:"none"});
+
+            //열린 서브메뉴에 대해서만 가립니다.
+            $(".sub").each(function(){
+                console.log($(this).css("display"));
+                if($(this).css("display")=="block") {
+                    //$(".sub").css({display:"none"});
+                    //$(this).hide();
+                    $(this).slideUp("fast");
+                }
+            });
+
+            //현재 요소의 다음 요소를 보이게 합니다.
+            //$(this).next("ul").css({display:"block"});
+            //$(this).next("ul").show();
+            $(this).next("ul").slideDown("fast");
+        })
+    });
+</script>
+
+<body>
+  <img src="C:\Users\wdf78\OneDrive\바탕 화면\HJH\2021 1학기\프로젝트구현 - 임경현\사진/Logo.png"
+            alt="Logo"></img>
+   <div id ="menu_background">
+    <ul id="navi">
+        <li class="group">
+            <div class="title"><a href="main.html">백신</a></div>
+        </li>
+
+        <li class="group">
+            <div class="title">기사</div>
+            <ul class="sub">
+                <li><a href="arti_press.html">언론사 별</a></li>
+                <li><a href="arti_vac.html">백신 별</a></li>
+            </ul>
+        </li>
+
+        <li class="group">
+            <div class="title"><a herf="vac_post.html">접종후기</a></div>
+        </li>
+
+        <li class="group">
+            <div class="title">공지</a></div>
+            <ul class="sub">
+                <li><a href="notice.html">공지사항</a></li>
+                <li><a href="noti_infor.html">문의 및 제보</a></li>
+                <li><a href="noti_spon_infor.html">후원정보</a></li>
+            </ul>
+        </li>
+
+        <li class="group">
+            <div class="title">바로알기</div>
+            <ul class="sub">
+            <li><a href="knowing_type of vac.html">백신 종류별 특성</a></li>
+            <li><a href="knowing_vac_organ.html">백신 접종 기관</a></li>
+            <li><a href="knowing_vac_vidio.html">백신 동영상</a></li>
+          </ul>
+      </li>
+  </ul>
+
+  <div id="menu_menu_back">코로나 접종 후기 게시판
+    <div id="ex_back"><p>코로나 백신 접종하신 분들의 후기를 작성하는 게시판입니다.<br>
+                      여러분들의 정보가 대한민국의 백신입니다.<br><br>
+                      허위 사실을 유포하시면 법적 처벌을 받을 수 있습니다.</p>
+                    </div>
+  </div>
+
+  <div id="ads">광고 공간</div>
+ </div>
+
+    <p class="footer">
+      Copyright2021.1조 All pictures cannot be copied without permisson.<br>
+      yghasd@g.shingu.ac.kr
+    </p>
+</body>
+</html>
